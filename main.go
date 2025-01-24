@@ -24,11 +24,11 @@ func main() {
     }
 
     psqlInfo := fmt.Sprintf(`host=%s port=%s user=%s password=%s dbname=%s sslmode=disable`,
-       os.Getenv("DB_HOST"),
-       os.Getenv("DB_PORT"),
-       os.Getenv("DB_USER"),
-       os.Getenv("DB_PASSWORD"),
-       os.Getenv("DB_NAME"),
+       os.Getenv("PGHOST"),
+       os.Getenv("PGPORT"),
+       os.Getenv("PGUSER"),
+       os.Getenv("PGPASSWORD"),
+       os.Getenv("PGDATABASE"),
     )
 
 
@@ -47,7 +47,7 @@ func main() {
     router.PUT("/persons/:id", controllers.UpdatePerson)
     router.DELETE("/persons/:id", controllers.DeletePerson)
 
-	router.Run(":8080")
+	router.Run(":" + os.Getenv("PORT"))
 
 	fmt.Println("Berhasil menyambung ke DB!")
 }
