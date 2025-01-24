@@ -1,38 +1,27 @@
 {
 	"info": {
-		"_postman_id": "1d0df3b5-1912-4e69-86bd-fbeedb646b94",
-		"name": "miniproject",
+		"_postman_id": "ad4a0109-2893-4927-bf45-3d94fc0db82f",
+		"name": "deployment railway test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "22087046"
 	},
 	"item": [
 		{
-			"name": "Get Person Copy",
+			"name": "Get data",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/persons",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"persons"
-					]
-				}
+				"header": []
 			},
 			"response": []
 		},
 		{
-			"name": "Add data Person Copy",
+			"name": "Add data Person",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"first_name\": \"Fahril\",\n    \"last_name\": \"Rizal\"\n}",
+					"raw": "{\n    \"first_name\": \"Jhon\",\n    \"last_name\": \"Doe\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,12 +29,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/persons",
-					"protocol": "http",
+					"raw": "https://miniproject-sanbercode-production-4af9.up.railway.app/persons",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"miniproject-sanbercode-production-4af9",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8080",
 					"path": [
 						"persons"
 					]
@@ -59,12 +50,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/persons/2",
-					"protocol": "http",
+					"raw": "https://miniproject-sanbercode-production-4af9.up.railway.app/persons/2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"miniproject-sanbercode-production-4af9",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8080",
 					"path": [
 						"persons",
 						"2"
@@ -74,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "Update data Copy",
+			"name": "Update data",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -88,12 +81,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/persons/1",
-					"protocol": "http",
+					"raw": "https://miniproject-sanbercode-production-4af9.up.railway.app/persons/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"miniproject-sanbercode-production-4af9",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8080",
 					"path": [
 						"persons",
 						"1"
